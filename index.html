@@ -1,12 +1,79 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Steve Liliopoulos | Business AI Playbooks</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Practical playbooks for business leaders applying AI to real workflows, by Steve Liliopoulos.">
+<title>Business AI Playbooks | Steve Liliopoulos</title>
+<style>
+:root{color-scheme:light;--ink:#15293a;--muted:#435a67;--paper:#f6f4ee;--green:#14614f;--line:#cfdbd4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.08rem/1.65 system-ui,sans-serif}
+.wrap{width:min(100% - 2.5rem,66rem);margin:auto}
+header,footer{padding:1.25rem 0;border-block:1px solid var(--line)}
+nav{display:flex;gap:1rem 1.5rem;flex-wrap:wrap;align-items:center}
+nav strong{margin-right:auto}
+a{color:var(--green);text-underline-offset:.2em}
+a:focus-visible{outline:3px solid #087c62;outline-offset:4px}
+.hero{padding:clamp(3rem,10vw,7rem) 0 3rem}
+.kicker{color:var(--green);font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;font-weight:750}
+h1,h2,h3{line-height:1.13;margin:.45em 0}
+h1{font-size:clamp(2.9rem,8vw,6rem);letter-spacing:-.07em;max-width:12ch}
+h2{font-size:clamp(2rem,5vw,3.35rem);letter-spacing:-.045em}
+h3{font-size:1.35rem}
+.lead{font-size:1.25rem;color:var(--muted);max-width:49ch}
+.button{display:inline-block;background:var(--green);color:white;padding:.65rem 1rem;border-radius:.4rem;font-weight:700}
+article,#about{border-top:1px solid var(--line);padding:2.5rem 0}
+.reading{max-width:45rem}
+li+li{margin-top:.75rem}
+aside{background:#e5efe8;border-left:.3rem solid var(--green);padding:1rem 1.4rem;margin:1.5rem 0}
+footer{color:var(--muted)}
+</style>
 </head>
 <body>
-  <h1>Business AI Playbooks</h1>
-  <p>Practical guides to applying AI in business, by Steve Liliopoulos.</p>
+<header><nav class="wrap" aria-label="Main navigation"><strong>Steve Liliopoulos</strong><a href="#playbook">Playbook</a><a href="#about">About</a></nav></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="home-title">
+<p class="kicker">Practical guides for business leaders</p>
+<h1 id="home-title">Business AI Playbooks</h1>
+<p class="lead">Learn how to apply AI to real work, measure what improves and decide when it’s ready to scale.</p>
+<a class="button" href="#playbook">Read the first playbook ↓</a>
+</section>
+<article id="playbook" aria-labelledby="playbook-title">
+<div class="reading">
+<p class="kicker">Playbook 01 · AI adoption</p>
+<h2 id="playbook-title">Is your AI agent pilot ready to scale?</h2>
+<p class="lead">Start with one workflow and measure how often the agent’s work reaches the right outcome without someone having to redo it.</p>
+<h3>Run four checks before expanding</h3>
+<ol>
+<li><strong>Define the job.</strong> Name the cases the agent can handle, the outcome it should produce and the exceptions it must hand to a person.</li>
+<li><strong>Measure a baseline.</strong> Sample comparable cases from the existing workflow. Record first-pass quality and staff time, including time spent correcting errors.</li>
+<li><strong>Review outcomes.</strong> Agree what counts as correct before testing. Sample routine cases and exceptions. Track corrections, escalations and policy breaches separately.</li>
+<li><strong>Agree the decision rule.</strong> Set thresholds with the process owner before the pilot. Give someone authority to pause the rollout and define what triggers that pause.</li>
+</ol>
+<aside aria-labelledby="example-title">
+<h3 id="example-title">Worked example · Customer service triage</h3>
+<p>A service team pilots an agent that categorises and routes incoming enquiries. In this illustrative test, the agent routes 90 of 100 eligible enquiries correctly on the first pass. Staff correct the remaining 10. That’s a <strong>90% first-pass routing rate</strong>. The team agreed to require at least 95% before expanding, so it reviews the misroutes and reruns the test after making changes.</p>
+<p>The team also tests whether the agent hands sensitive enquiries to a person. It tracks correct handoffs separately and pauses expansion if any sensitive case bypasses review.</p>
+</aside>
+<h3>Use this checklist at your pilot review</h3>
+<ul>
+<li>We know which cases are in scope and who owns the workflow.</li>
+<li>We can compare pilot results with the existing process.</li>
+<li>We can show the number of correct outcomes, corrections and escalations.</li>
+<li>We tested exceptions and know who can pause the rollout.</li>
+<li>We have recorded the decision to expand, refine or pause, with a reason.</li>
+</ul>
+</div>
+</article>
+<section id="about" aria-labelledby="about-title">
+<div class="reading">
+<p class="kicker">About</p>
+<h2 id="about-title">Steve Liliopoulos</h2>
+<p>I work across business applications and digital transformation, with experience in Dynamics 365, ERP and CRM. I write these playbooks for leaders deciding where AI can improve a workflow, how to test it and what evidence they need before expanding it.</p>
+</div>
+</section>
+</main>
+<footer><div class="wrap">Steve Liliopoulos · Business AI Playbooks</div></footer>
 </body>
 </html>
