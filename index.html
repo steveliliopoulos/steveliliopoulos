@@ -28,18 +28,28 @@ article,#about{border-top:1px solid var(--line);padding:2.5rem 0}
 li+li{margin-top:.75rem}
 aside{background:#e5efe8;border-left:.3rem solid var(--green);padding:1rem 1.4rem;margin:1.5rem 0}
 footer{color:var(--muted)}
+
+.hero{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:2rem;padding:4rem 0}
+h1{font-family:Georgia,serif;letter-spacing:-.045em;font-size:clamp(2.6rem,5vw,4.7rem);max-width:13ch}
+.hero-art{display:block;width:100%;height:auto;border-radius:1.2rem}
+.playbook-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:1rem 0 3rem}
+.topic{padding:1.5rem;background:#edf1e9;border-radius:.8rem}
+.topic svg{width:64px;height:64px;color:var(--green);margin-bottom:.7rem}
+.topic h3{font-size:1.2rem}.topic p{font-size:1rem;margin:.8rem 0 0}
+.topic small{display:block;color:var(--muted);margin-top:.7rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:2.5rem 0}.hero-art{max-width:36rem}.playbook-topics{grid-template-columns:1fr}h1{max-width:14ch}}
 </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Main navigation"><strong>Steve Liliopoulos</strong><a href="#playbook">Playbook</a><a href="#about">About</a></nav></header>
 <main class="wrap">
-<section class="hero" aria-labelledby="home-title">
+<section class="hero" aria-labelledby="home-title"><div class="hero-copy">
 <p class="kicker">Practical guides for business leaders</p>
 <h1 id="home-title">Business AI Playbooks</h1>
 <p class="lead">Learn how to apply AI to real work, measure what improves and decide when it’s ready to scale.</p>
-<a class="button" href="#playbook">Read the first playbook ↓</a>
+<a class="button" href="#playbook">Read the first playbook ↓</a></div><img class="hero-art" src="./business-ai-hero.webp" width="1536" height="1024" alt="Business professionals collaborating, with illustrations connecting AI, workflows and data.">
 </section>
-<article id="playbook" aria-labelledby="playbook-title">
+<section class="playbook-topics" aria-label="Explore the playbooks"><div class="topic"><svg aria-hidden="true" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><rect x="22" y="4" width="20" height="14" rx="3"/><path d="M32 18v12M12 40V30h40v10M32 30v10"/><rect x="3" y="40" width="18" height="17" rx="3"/><rect x="24" y="40" width="17" height="17" rx="3"/><rect x="44" y="40" width="17" height="17" rx="3"/></svg><h3>Choose a workflow</h3><p>Compare opportunities by value, readiness and consequences of an error.</p><small>Guide planned</small></div><div class="topic"><svg aria-hidden="true" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><rect x="13" y="9" width="39" height="50" rx="4"/><rect x="23" y="4" width="19" height="11" rx="3"/><path d="m20 29 4 4 8-9M36 28h10M20 43h9M36 43h10"/></svg><h3><a href="#playbook">Test your pilot</a></h3><p>Use a practical checklist to decide whether to expand, refine or pause.</p><small>Read the guide below</small></div><div class="topic"><svg aria-hidden="true" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M7 56h51M13 49V35h9v14M29 49V24h9v25M45 49V10h9v39"/></svg><h3>Measure the cost</h3><p>Consider usage, human review and rework when planning to scale.</p><small>Guide planned</small></div></section><article id="playbook" aria-labelledby="playbook-title">
 <div class="reading">
 <p class="kicker">Playbook 01 · AI adoption</p>
 <h2 id="playbook-title">Is your AI agent pilot ready to scale?</h2>
