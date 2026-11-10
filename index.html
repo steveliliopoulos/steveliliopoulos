@@ -1,89 +1,53 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Practical playbooks for business leaders applying AI to real workflows, by Steve Liliopoulos.">
-<title>Business AI Playbooks | Steve Liliopoulos</title>
-<style>
-:root{color-scheme:light;--ink:#15293a;--muted:#435a67;--paper:#f6f4ee;--green:#14614f;--line:#cfdbd4}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:1.08rem/1.65 system-ui,sans-serif}
-.wrap{width:min(100% - 2.5rem,66rem);margin:auto}
-header,footer{padding:1.25rem 0;border-block:1px solid var(--line)}
-nav{display:flex;gap:1rem 1.5rem;flex-wrap:wrap;align-items:center}
-nav strong{margin-right:auto}
-a{color:var(--green);text-underline-offset:.2em}
-a:focus-visible{outline:3px solid #087c62;outline-offset:4px}
-.hero{padding:clamp(3rem,10vw,7rem) 0 3rem}
-.kicker{color:var(--green);font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;font-weight:750}
-h1,h2,h3{line-height:1.13;margin:.45em 0}
-h1{font-size:clamp(2.9rem,8vw,6rem);letter-spacing:-.07em;max-width:12ch}
-h2{font-size:clamp(2rem,5vw,3.35rem);letter-spacing:-.045em}
-h3{font-size:1.35rem}
-.lead{font-size:1.25rem;color:var(--muted);max-width:49ch}
-.button{display:inline-block;background:var(--green);color:white;padding:.65rem 1rem;border-radius:.4rem;font-weight:700}
-article,#about{border-top:1px solid var(--line);padding:2.5rem 0}
-.reading{max-width:45rem}
-li+li{margin-top:.75rem}
-aside{background:#e5efe8;border-left:.3rem solid var(--green);padding:1rem 1.4rem;margin:1.5rem 0}
-footer{color:var(--muted)}
-
-.hero{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:2rem;padding:4rem 0}
-h1{font-family:Georgia,serif;letter-spacing:-.045em;font-size:clamp(2.6rem,5vw,4.7rem);max-width:13ch}
-.hero-art{display:block;width:100%;height:auto;border-radius:1.2rem}
-.playbook-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:1rem 0 3rem}
-.topic{padding:1.5rem;background:#edf1e9;border-radius:.8rem}
-.topic svg{width:64px;height:64px;color:var(--green);margin-bottom:.7rem}
-.topic h3{font-size:1.2rem}.topic p{font-size:1rem;margin:.8rem 0 0}
-.topic small{display:block;color:var(--muted);margin-top:.7rem}
-@media(max-width:760px){.hero{grid-template-columns:1fr;padding:2.5rem 0}.hero-art{max-width:36rem}.playbook-topics{grid-template-columns:1fr}h1{max-width:14ch}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Steve Liliopoulos shares practical perspectives on business AI, enterprise transformation, governance and productivity.">
+  <title>Steve Liliopoulos | Making AI Work for Business</title>
+  <style>
+    :root{--navy:#102f58;--blue:#0875d1;--light:#eef7ff;--muted:#516b88;--line:#c9def1;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--navy);background:#fff}a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #f3a53b;outline-offset:4px}.wrap{max-width:1200px;margin:auto;padding:0 24px}
+    header{background:white;border-bottom:1px solid #e4edf5;position:sticky;top:0;z-index:20}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}.brand{font-size:clamp(17px,2.3vw,26px);font-weight:800;letter-spacing:.035em}.links{display:flex;gap:25px;align-items:center;font-weight:600;font-size:14px}.links a:hover{color:var(--blue)}.menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 12px;color:var(--navy)}
+    .hero{background:linear-gradient(110deg,#f8fcff 5%,#d9edff 52%,#75b8ec 100%);position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;right:-80px;top:-150px;border:2px solid #ffffff80;box-shadow:0 0 0 40px #ffffff20,0 0 0 80px #ffffff25,0 0 0 120px #ffffff18;pointer-events:none}.hero-inner{padding-top:90px;padding-bottom:95px;position:relative}.eyebrow{color:#076dbd;font-size:13px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.hero h1{font-size:clamp(40px,6vw,75px);line-height:1.08;letter-spacing:-.04em;margin:12px 0 18px;max-width:700px}.hero p{font-size:clamp(17px,2vw,22px);margin:0 0 25px;max-width:650px}.cta{display:inline-block;background:var(--blue);color:#fff;padding:12px 22px;border-radius:28px;font-weight:700;transition:background .2s,transform .2s,box-shadow .2s}.cta:hover{background:#07549b;transform:translateY(-3px);box-shadow:0 8px 18px #0964ac40}
+    section{scroll-margin-top:90px}.section{padding-top:45px;padding-bottom:45px}.section h2{font-size:clamp(25px,3vw,35px);margin:0 0 8px}.intro{color:var(--muted);margin:0 0 23px}.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.pillar{display:block;text-align:left;border:1px solid var(--line);background:linear-gradient(145deg,#f7fbff,#eaf4fd);border-radius:15px;padding:23px;min-height:210px;transition:transform .22s,box-shadow .22s,border-color .22s,background .22s;cursor:pointer}.pillar:hover,.pillar:focus-visible{transform:translateY(-7px);border-color:var(--blue);background:#fff;box-shadow:0 14px 30px #1a6fb32b}.pillar .symbol{font-size:31px;color:var(--blue)}.pillar h3{font-size:18px;line-height:1.25;margin:14px 0 10px}.pillar p{color:var(--muted);font-size:14px;margin:0}.pillar .arrow{display:block;text-align:right;color:var(--blue);font-size:20px;margin-top:12px}
+    .insight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.article{border:1px solid #e0eaf3;border-radius:14px;overflow:hidden;background:white;transition:transform .22s,box-shadow .22s,border-color .22s}.article:hover{transform:translateY(-5px);box-shadow:0 12px 26px #1a6fb325;border-color:var(--blue)}.art{height:150px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 70% 30%,#b0e1ff,#398ac9 60%,#174e8a);color:#fff;font-size:65px}.article-body{padding:20px}.tag{font-size:12px;color:#0867ba;font-weight:800;letter-spacing:.03em}.article h3{font-size:19px;line-height:1.3;margin:9px 0}.article p{color:var(--muted);font-size:14px}.coming{display:inline-block;background:#eaf4fd;color:#225987;font-size:12px;padding:5px 9px;border-radius:20px;font-weight:700}
+    .featured{background:#edf6ff;border-radius:18px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.featured h2{margin:7px 0}.featured p{color:var(--muted)}.feature-art{min-height:200px;border-radius:14px;background:linear-gradient(135deg,#d7efff,#6aafe1,#164d87);display:flex;align-items:center;justify-content:center;color:white;font-size:80px}
+    .topic-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.topic{padding:22px;border:1px solid var(--line);border-radius:14px;background:#f7fbff;transition:box-shadow .2s,border-color .2s}.topic:target{border-color:var(--blue);box-shadow:0 0 0 3px #0875d125}.topic h3{margin:0 0 7px}.topic p{margin:0;color:var(--muted)}.about{background:#f5f9fd}.footer{background:#0b3767;color:white;padding:30px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px}.footer a{color:#fff;text-decoration:underline;text-underline-offset:4px}
+    @media(max-width:900px){.pillars{grid-template-columns:repeat(2,1fr)}.insight-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){.wrap{padding:0 18px}.nav{min-height:64px}.menu{display:block}.links{display:none;position:absolute;top:64px;left:0;right:0;background:white;padding:18px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.hero-inner{padding-top:65px;padding-bottom:70px}.pillars,.insight-grid,.topic-list,.featured{grid-template-columns:1fr}.pillar{min-height:0}.footer-inner{flex-direction:column;align-items:flex-start}.feature-art{min-height:150px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
 </head>
 <body>
-<header><nav class="wrap" aria-label="Main navigation"><strong>Steve Liliopoulos</strong><a href="#playbook">Playbook</a><a href="#about">About</a></nav></header>
-<main class="wrap">
-<section class="hero" aria-labelledby="home-title"><div class="hero-copy">
-<p class="kicker">Practical guides for business leaders</p>
-<h1 id="home-title">Business AI Playbooks</h1>
-<p class="lead">Learn how to apply AI to real work, measure what improves and decide when it’s ready to scale.</p>
-<a class="button" href="#playbook">Read the first playbook ↓</a></div><img class="hero-art" src="./business-ai-hero.webp" width="1536" height="1024" alt="Business professionals collaborating, with illustrations connecting AI, workflows and data.">
-</section>
-<section class="playbook-topics" aria-label="Explore the playbooks"><div class="topic"><svg aria-hidden="true" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><rect x="22" y="4" width="20" height="14" rx="3"/><path d="M32 18v12M12 40V30h40v10M32 30v10"/><rect x="3" y="40" width="18" height="17" rx="3"/><rect x="24" y="40" width="17" height="17" rx="3"/><rect x="44" y="40" width="17" height="17" rx="3"/></svg><h3>Choose a workflow</h3><p>Compare opportunities by value, readiness and consequences of an error.</p><small>Guide planned</small></div><div class="topic"><svg aria-hidden="true" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><rect x="13" y="9" width="39" height="50" rx="4"/><rect x="23" y="4" width="19" height="11" rx="3"/><path d="m20 29 4 4 8-9M36 28h10M20 43h9M36 43h10"/></svg><h3><a href="#playbook">Test your pilot</a></h3><p>Use a practical checklist to decide whether to expand, refine or pause.</p><small>Read the guide below</small></div><div class="topic"><svg aria-hidden="true" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M7 56h51M13 49V35h9v14M29 49V24h9v25M45 49V10h9v39"/></svg><h3>Measure the cost</h3><p>Consider usage, human review and rework when planning to scale.</p><small>Guide planned</small></div></section><article id="playbook" aria-labelledby="playbook-title">
-<div class="reading">
-<p class="kicker">Playbook 01 · AI adoption</p>
-<h2 id="playbook-title">Is your AI agent pilot ready to scale?</h2>
-<p class="lead">Start with one workflow and measure how often the agent’s work reaches the right outcome without someone having to redo it.</p>
-<h3>Run four checks before expanding</h3>
-<ol>
-<li><strong>Define the job.</strong> Name the cases the agent can handle, the outcome it should produce and the exceptions it must hand to a person.</li>
-<li><strong>Measure a baseline.</strong> Sample comparable cases from the existing workflow. Record first-pass quality and staff time, including time spent correcting errors.</li>
-<li><strong>Review outcomes.</strong> Agree what counts as correct before testing. Sample routine cases and exceptions. Track corrections, escalations and policy breaches separately.</li>
-<li><strong>Agree the decision rule.</strong> Set thresholds with the process owner before the pilot. Give someone authority to pause the rollout and define what triggers that pause.</li>
-</ol>
-<aside aria-labelledby="example-title">
-<h3 id="example-title">Worked example · Customer service triage</h3>
-<p>A service team pilots an agent that categorises and routes incoming enquiries. In this illustrative test, the agent routes 90 of 100 eligible enquiries correctly on the first pass. Staff correct the remaining 10. That’s a <strong>90% first-pass routing rate</strong>. The team agreed to require at least 95% before expanding, so it reviews the misroutes and reruns the test after making changes.</p>
-<p>The team also tests whether the agent hands sensitive enquiries to a person. It tracks correct handoffs separately and pauses expansion if any sensitive case bypasses review.</p>
-</aside>
-<h3>Use this checklist at your pilot review</h3>
-<ul>
-<li>We know which cases are in scope and who owns the workflow.</li>
-<li>We can compare pilot results with the existing process.</li>
-<li>We can show the number of correct outcomes, corrections and escalations.</li>
-<li>We tested exceptions and know who can pause the rollout.</li>
-<li>We have recorded the decision to expand, refine or pause, with a reason.</li>
-</ul>
-</div>
-</article>
-<section id="about" aria-labelledby="about-title">
-<div class="reading">
-<p class="kicker">About</p>
-<h2 id="about-title">Steve Liliopoulos</h2>
-<p>I work across business applications and digital transformation, with experience in Dynamics 365, ERP and CRM. I write these playbooks for leaders deciding where AI can improve a workflow, how to test it and what evidence they need before expanding it.</p>
-</div>
-</section>
-</main>
-<footer><div class="wrap">Steve Liliopoulos · Business AI Playbooks</div></footer>
+  <header><div class="wrap nav"><a class="brand" href="#home">STEVE LILIOPOULOS</a><button class="menu" id="menu" aria-expanded="false" aria-controls="nav-links">Menu ☰</button><nav class="links" id="nav-links" aria-label="Main navigation"><a href="#home">Home</a><a href="#insights">Latest Insights</a><a href="#topics">Explore Topics</a><a href="#about">About</a><a href="#connect">Connect</a></nav></div></header>
+  <main>
+    <section class="hero" id="home"><div class="wrap hero-inner"><div class="eyebrow">Business AI &amp; Digital Transformation</div><h1>Making AI Work<br>for Business</h1><p>Turning AI ambition into practical business outcomes.</p><a class="cta" href="#insights">Explore Latest Insights →</a></div></section>
+    <section class="section wrap" aria-labelledby="pillars-heading"><h2 id="pillars-heading">Explore the Four Pillars</h2><p class="intro">Practical perspectives on how AI creates lasting business value.</p><div class="pillars">
+      <a class="pillar" href="#strategy"><span class="symbol" aria-hidden="true">◈</span><h3>AI Strategy &amp; Business Value</h3><p>Turning AI investment into measurable impact.</p><span class="arrow">↗</span></a>
+      <a class="pillar" href="#agents"><span class="symbol" aria-hidden="true">▦</span><h3>AI Agents &amp; Enterprise Transformation</h3><p>Building intelligent workflows at scale.</p><span class="arrow">↗</span></a>
+      <a class="pillar" href="#governance"><span class="symbol" aria-hidden="true">◇</span><h3>AI Governance &amp; Adoption</h3><p>Responsible AI for sustainable success.</p><span class="arrow">↗</span></a>
+      <a class="pillar" href="#productivity"><span class="symbol" aria-hidden="true">↗</span><h3>Practical AI &amp; Productivity</h3><p>Working smarter with AI tools and techniques.</p><span class="arrow">↗</span></a>
+    </div></section>
+    <section class="section wrap" id="insights"><h2>Latest Insights</h2><p class="intro">Articles in development. New perspectives will be published here.</p><div class="insight-grid">
+      <article class="article"><div class="art" aria-hidden="true">◈</div><div class="article-body"><span class="tag">AI STRATEGY</span><h3>Why AI Transformation Is a Business Transformation</h3><p>Why the operating model matters as much as the technology.</p><span class="coming">Coming soon</span></div></article>
+      <article class="article"><div class="art" aria-hidden="true">✧</div><div class="article-body"><span class="tag">ENTERPRISE AI</span><h3>How AI Agents Are Changing Enterprise Workflows</h3><p>Where agents can make a practical difference to how work gets done.</p><span class="coming">Coming soon</span></div></article>
+      <article class="article"><div class="art" aria-hidden="true">◇</div><div class="article-body"><span class="tag">AI GOVERNANCE</span><h3>Who Is Accountable When AI Makes Decisions?</h3><p>Decision rights, oversight and trust in AI-enabled processes.</p><span class="coming">Coming soon</span></div></article>
+    </div></section>
+    <section class="section wrap"><div class="featured"><div><span class="eyebrow">Featured Perspective</span><h2>From AI Pilots to Business Value</h2><p>Why organisations can struggle to scale AI — and the questions leaders should ask before expanding a pilot.</p><span class="coming">Article coming soon</span></div><div class="feature-art" aria-hidden="true">◎</div></div></section>
+    <section class="section wrap" id="topics"><h2>Explore by Topic</h2><p class="intro">Choose an area of interest to explore the thinking behind effective business AI.</p><div class="topic-list">
+      <div class="topic" id="strategy"><h3>AI Strategy &amp; Business Value</h3><p>Prioritisation, investment cases, business outcomes and value measurement.</p></div>
+      <div class="topic" id="agents"><h3>AI Agents &amp; Enterprise Transformation</h3><p>Intelligent workflows, CRM, ERP, automation and connected operations.</p></div>
+      <div class="topic" id="governance"><h3>AI Governance &amp; Adoption</h3><p>Accountability, risk, change management and responsible adoption.</p></div>
+      <div class="topic" id="productivity"><h3>Practical AI &amp; Productivity</h3><p>Practical ways to apply AI to everyday professional work.</p></div>
+    </div></section>
+    <section class="section about" id="about"><div class="wrap"><h2>About Steve</h2><p>I'm Steve Liliopoulos, a business AI and digital transformation practitioner based in Sydney, Australia. I explore how organisations can connect AI, enterprise technology, people and processes to deliver meaningful business outcomes.</p><p>My focus is practical: identifying worthwhile opportunities, making better transformation decisions and helping teams turn technology potential into lasting value.</p></div></section>
+  </main>
+  <footer class="footer" id="connect"><div class="wrap footer-inner"><div><strong>Let's connect</strong><div>Join the conversation about Business AI and Digital Transformation.</div></div><div>Connect with me on LinkedIn — <em>add your profile URL here</em></div></div></footer>
+  <script>
+    const menu=document.getElementById('menu');const links=document.getElementById('nav-links');
+    menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+    links.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+  </script>
 </body>
 </html>
