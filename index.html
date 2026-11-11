@@ -9,7 +9,7 @@
     :root{--navy:#102f58;--blue:#0875d1;--light:#eef7ff;--muted:#516b88;--line:#c9def1;--white:#fff}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--navy);background:#fff}a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #f3a53b;outline-offset:4px}.wrap{max-width:1200px;margin:auto;padding:0 24px}
     header{background:white;border-bottom:1px solid #e4edf5;position:sticky;top:0;z-index:20}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}.brand{font-size:clamp(17px,2.3vw,26px);font-weight:800;letter-spacing:.035em}.links{display:flex;gap:25px;align-items:center;font-weight:600;font-size:14px}.links a:hover{color:var(--blue)}.menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 12px;color:var(--navy)}
-    .hero{background:linear-gradient(110deg,#f8fcff 5%,#d9edff 52%,#75b8ec 100%);position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;right:-80px;top:-150px;border:2px solid #ffffff80;box-shadow:0 0 0 40px #ffffff20,0 0 0 80px #ffffff25,0 0 0 120px #ffffff18;pointer-events:none}.hero-inner{padding-top:90px;padding-bottom:95px;position:relative}.eyebrow{color:#076dbd;font-size:13px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.hero h1{font-size:clamp(40px,6vw,75px);line-height:1.08;letter-spacing:-.04em;margin:12px 0 18px;max-width:700px}.hero p{font-size:clamp(17px,2vw,22px);margin:0 0 25px;max-width:650px}.cta{display:inline-block;background:var(--blue);color:#fff;padding:12px 22px;border-radius:28px;font-weight:700;transition:background .2s,transform .2s,box-shadow .2s}.cta:hover{background:#07549b;transform:translateY(-3px);box-shadow:0 8px 18px #0964ac40}
+    .hero{background:linear-gradient(110deg,#f8fcff 5%,#d9edff 52%,#75b8ec 100%);position:relative;overflow:hidden}.hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9}.hero-inner{z-index:1}.hero-inner:before{content:"";position:absolute;inset:0 auto 0 -30px;width:min(68%,730px);background:linear-gradient(90deg,#f7fcff 55%,#f7fcff00);z-index:-1;pointer-events:none}.hero-inner{padding-top:90px;padding-bottom:95px;position:relative}.eyebrow{color:#076dbd;font-size:13px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.hero h1{font-size:clamp(40px,6vw,75px);line-height:1.08;letter-spacing:-.04em;margin:12px 0 18px;max-width:700px}.hero p{font-size:clamp(17px,2vw,22px);margin:0 0 25px;max-width:650px}.cta{display:inline-block;background:var(--blue);color:#fff;padding:12px 22px;border-radius:28px;font-weight:700;transition:background .2s,transform .2s,box-shadow .2s}.cta:hover{background:#07549b;transform:translateY(-3px);box-shadow:0 8px 18px #0964ac40}
     section{scroll-margin-top:90px}.section{padding-top:45px;padding-bottom:45px}.section h2{font-size:clamp(25px,3vw,35px);margin:0 0 8px}.intro{color:var(--muted);margin:0 0 23px}.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.pillar{display:block;text-align:left;border:1px solid var(--line);background:linear-gradient(145deg,#f7fbff,#eaf4fd);border-radius:15px;padding:23px;min-height:210px;transition:transform .22s,box-shadow .22s,border-color .22s,background .22s;cursor:pointer}.pillar:hover,.pillar:focus-visible{transform:translateY(-7px);border-color:var(--blue);background:#fff;box-shadow:0 14px 30px #1a6fb32b}.pillar .symbol{font-size:31px;color:var(--blue)}.pillar h3{font-size:18px;line-height:1.25;margin:14px 0 10px}.pillar p{color:var(--muted);font-size:14px;margin:0}.pillar .arrow{display:block;text-align:right;color:var(--blue);font-size:20px;margin-top:12px}
     .insight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.article{border:1px solid #e0eaf3;border-radius:14px;overflow:hidden;background:white;transition:transform .22s,box-shadow .22s,border-color .22s}.article:hover{transform:translateY(-5px);box-shadow:0 12px 26px #1a6fb325;border-color:var(--blue)}.art{height:150px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 70% 30%,#b0e1ff,#398ac9 60%,#174e8a);color:#fff;font-size:65px}.article-body{padding:20px}.tag{font-size:12px;color:#0867ba;font-weight:800;letter-spacing:.03em}.article h3{font-size:19px;line-height:1.3;margin:9px 0}.article p{color:var(--muted);font-size:14px}.coming{display:inline-block;background:#eaf4fd;color:#225987;font-size:12px;padding:5px 9px;border-radius:20px;font-weight:700}
     .featured{background:#edf6ff;border-radius:18px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.featured h2{margin:7px 0}.featured p{color:var(--muted)}.feature-art{min-height:200px;border-radius:14px;background:linear-gradient(135deg,#d7efff,#6aafe1,#164d87);display:flex;align-items:center;justify-content:center;color:white;font-size:80px}
@@ -22,7 +22,7 @@
 <body>
   <header><div class="wrap nav"><a class="brand" href="#home">STEVE LILIOPOULOS</a><button class="menu" id="menu" aria-expanded="false" aria-controls="nav-links">Menu ☰</button><nav class="links" id="nav-links" aria-label="Main navigation"><a href="#home">Home</a><a href="#insights">Latest Insights</a><a href="#topics">Explore Topics</a><a href="#about">About</a><a href="#connect">Connect</a></nav></div></header>
   <main>
-    <section class="hero" id="home"><div class="wrap hero-inner"><div class="eyebrow">Business AI &amp; Digital Transformation</div><h1>Making AI Work<br>for Business</h1><p>Turning AI ambition into practical business outcomes.</p><a class="cta" href="#insights">Explore Latest Insights →</a></div></section>
+    <section class="hero" id="home"><canvas class="hero-canvas" id="heroAnimation" aria-hidden="true"></canvas><div class="wrap hero-inner"><div class="eyebrow">Business AI &amp; Digital Transformation</div><h1>Making AI Work<br>for Business</h1><p>Turning AI ambition into practical business outcomes.</p><a class="cta" href="#insights">Explore Latest Insights →</a></div></section>
     <section class="section wrap" aria-labelledby="pillars-heading"><h2 id="pillars-heading">Explore the Four Pillars</h2><p class="intro">Practical perspectives on how AI creates lasting business value.</p><div class="pillars">
       <a class="pillar" href="#strategy"><span class="symbol" aria-hidden="true">◈</span><h3>AI Strategy &amp; Business Value</h3><p>Turning AI investment into measurable impact.</p><span class="arrow">↗</span></a>
       <a class="pillar" href="#agents"><span class="symbol" aria-hidden="true">▦</span><h3>AI Agents &amp; Enterprise Transformation</h3><p>Building intelligent workflows at scale.</p><span class="arrow">↗</span></a>
@@ -48,6 +48,94 @@
     const menu=document.getElementById('menu');const links=document.getElementById('nav-links');
     menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
     links.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+  </script>
+
+  <script>
+  (() => {
+    const canvas = document.getElementById('heroAnimation');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    const hero = canvas.parentElement;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let w = 0, h = 0, dpr = 1, frame = 0, raf = 0;
+    function resize() {
+      const rect = hero.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function render(t) {
+      ctx.clearRect(0, 0, w, h);
+      const compact = w < 700;
+      const cx = compact ? w * .86 : w * .79;
+      const cy = h * .48;
+      const R = Math.min(h * .43, compact ? w * .37 : w * .22, 230);
+      const time = reduceMotion.matches ? 0 : t * .001;
+      const rings = [.55, .78, 1, 1.24];
+      // Alternating orbit rings and subtle pulsing halos.
+      rings.forEach((factor, i) => {
+        const radius = R * factor * (1 + .012 * Math.sin(time * (0.65 + i * .14) + i));
+        ctx.beginPath(); ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+        ctx.strokeStyle = i === 2 ? 'rgba(16,107,187,.35)' : 'rgba(24,119,198,.22)';
+        ctx.lineWidth = i === 2 ? 1.8 : 1.3; ctx.stroke();
+        // Highlight moving clockwise or anticlockwise around each ring.
+        const angle = (i % 2 ? -1 : 1) * time * (.26 + i * .11) + i * 1.6;
+        const px = cx + radius * Math.cos(angle), py = cy + radius * Math.sin(angle);
+        const glow = ctx.createRadialGradient(px,py,0,px,py,13);
+        glow.addColorStop(0,'rgba(255,255,255,.98)');
+        glow.addColorStop(.25,'rgba(0,113,220,.85)');
+        glow.addColorStop(1,'rgba(0,113,220,0)');
+        ctx.fillStyle = glow; ctx.beginPath(); ctx.arc(px,py,13,0,Math.PI*2); ctx.fill();
+        ctx.fillStyle = '#ffffff'; ctx.beginPath(); ctx.arc(px,py,2.6,0,Math.PI*2); ctx.fill();
+      });
+      // Gentle radial travelling wave across the central digital mesh.
+      // Each point rises and falls as a ripple travels from the centre outward.
+      const points = [];
+      const breathe = 1 + .014 * Math.sin(time * 1.15);
+      for (let row = -4; row <= 4; row++) for (let col = -4; col <= 4; col++) {
+        const baseX = col * R * .105, baseY = row * R * .105;
+        const distance = Math.hypot(baseX, baseY);
+        if (distance > R * .48) continue;
+        const phase = distance / R * 17 - time * 1.6;
+        const envelope = Math.max(0, 1 - distance / (R * .56));
+        const ripple = Math.sin(phase) * R * .014 * envelope;
+        const dx = distance > 0 ? baseX / distance : 0;
+        const dy = distance > 0 ? baseY / distance : 0;
+        points.push({
+          x: cx + baseX * breathe + dx * ripple + Math.sin(time * .36 + row * .6) * R * .004,
+          y: cy + baseY * breathe + dy * ripple + Math.cos(time * .36 + col * .6) * R * .004,
+          glow: .5 + .5 * Math.sin(phase)
+        });
+      }
+      points.forEach((a, i) => {
+        for (let j = i + 1; j < points.length; j++) {
+          const b = points[j], dist = Math.hypot(a.x - b.x, a.y - b.y);
+          if (dist > R * .165) continue;
+          const shimmer = (a.glow + b.glow) * .5;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = 'rgba(12,102,188,' + (.075 + .13 * (1 - dist / (R * .165)) + .075 * shimmer) + ')';
+          ctx.lineWidth = .8; ctx.stroke();
+        }
+        ctx.beginPath(); ctx.arc(a.x, a.y, 1.2 + a.glow * .45, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(9,101,194,' + (.35 + a.glow * .32) + ')'; ctx.fill();
+      });
+      // Short luminous connections from inner mesh to outer rings.
+      for(let i=0;i<12;i++){
+        const a=i*Math.PI/6+Math.sin(time*.16+i)*.05;
+        const r0=R*.47, r1=R*.76;
+        ctx.beginPath();ctx.moveTo(cx+Math.cos(a)*r0,cy+Math.sin(a)*r0);
+        ctx.lineTo(cx+Math.cos(a)*r1,cy+Math.sin(a)*r1);
+        ctx.strokeStyle='rgba(26,125,210,.14)';ctx.lineWidth=1;ctx.stroke();
+      }
+      if(!reduceMotion.matches) raf=requestAnimationFrame(render);
+    }
+    function start(){cancelAnimationFrame(raf);resize();raf=requestAnimationFrame(render)}
+    window.addEventListener('resize',start,{passive:true});
+    reduceMotion.addEventListener?.('change',start);
+    start();
+  })();
   </script>
 </body>
 </html>
